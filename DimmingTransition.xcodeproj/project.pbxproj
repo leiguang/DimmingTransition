@@ -9,21 +9,33 @@
 /* Begin PBXBuildFile section */
 		9AA4E3DC233C58C700E27D16 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA4E3DB233C58C700E27D16 /* AppDelegate.swift */; };
 		9AA4E3DE233C58C700E27D16 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA4E3DD233C58C700E27D16 /* SceneDelegate.swift */; };
-		9AA4E3E0233C58C700E27D16 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA4E3DF233C58C700E27D16 /* ViewController.swift */; };
+		9AA4E3E0233C58C700E27D16 /* ViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA4E3DF233C58C700E27D16 /* ViewController1.swift */; };
 		9AA4E3E3233C58C700E27D16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AA4E3E1233C58C700E27D16 /* Main.storyboard */; };
 		9AA4E3E5233C58C700E27D16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AA4E3E4233C58C700E27D16 /* Assets.xcassets */; };
 		9AA4E3E8233C58C700E27D16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AA4E3E6233C58C700E27D16 /* LaunchScreen.storyboard */; };
+		9AA4E3F3233C594400E27D16 /* DimmingPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA4E3F2233C594400E27D16 /* DimmingPresentationController.swift */; };
+		9AA4E3F5233C5AB900E27D16 /* DimmingPresentationAnimatedTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA4E3F4233C5AB900E27D16 /* DimmingPresentationAnimatedTransitioning.swift */; };
+		9AA4E3F7233C5ADF00E27D16 /* DimmingDismissalAnimatedTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA4E3F6233C5ADF00E27D16 /* DimmingDismissalAnimatedTransitioning.swift */; };
+		9AA4E3F9233C5BFE00E27D16 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA4E3F8233C5BFE00E27D16 /* ViewController2.swift */; };
+		9AA4E3FB233C5C0500E27D16 /* ViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA4E3FA233C5C0500E27D16 /* ViewController3.swift */; };
+		9AA4E3FF233C902F00E27D16 /* DimmingTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA4E3FE233C902F00E27D16 /* DimmingTransitioning.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9AA4E3D8233C58C700E27D16 /* DimmingTransition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DimmingTransition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AA4E3DB233C58C700E27D16 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9AA4E3DD233C58C700E27D16 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9AA4E3DF233C58C700E27D16 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9AA4E3DF233C58C700E27D16 /* ViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController1.swift; sourceTree = "<group>"; };
 		9AA4E3E2233C58C700E27D16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9AA4E3E4233C58C700E27D16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9AA4E3E7233C58C700E27D16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9AA4E3E9233C58C700E27D16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9AA4E3F2233C594400E27D16 /* DimmingPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DimmingPresentationController.swift; sourceTree = "<group>"; };
+		9AA4E3F4233C5AB900E27D16 /* DimmingPresentationAnimatedTransitioning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DimmingPresentationAnimatedTransitioning.swift; sourceTree = "<group>"; };
+		9AA4E3F6233C5ADF00E27D16 /* DimmingDismissalAnimatedTransitioning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DimmingDismissalAnimatedTransitioning.swift; sourceTree = "<group>"; };
+		9AA4E3F8233C5BFE00E27D16 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
+		9AA4E3FA233C5C0500E27D16 /* ViewController3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController3.swift; sourceTree = "<group>"; };
+		9AA4E3FE233C902F00E27D16 /* DimmingTransitioning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DimmingTransitioning.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,13 +68,27 @@
 		9AA4E3DA233C58C700E27D16 /* DimmingTransition */ = {
 			isa = PBXGroup;
 			children = (
+				9AA4E3EF233C58CF00E27D16 /* DimmingTransition */,
 				9AA4E3DB233C58C700E27D16 /* AppDelegate.swift */,
 				9AA4E3DD233C58C700E27D16 /* SceneDelegate.swift */,
-				9AA4E3DF233C58C700E27D16 /* ViewController.swift */,
+				9AA4E3DF233C58C700E27D16 /* ViewController1.swift */,
+				9AA4E3F8233C5BFE00E27D16 /* ViewController2.swift */,
+				9AA4E3FA233C5C0500E27D16 /* ViewController3.swift */,
 				9AA4E3E1233C58C700E27D16 /* Main.storyboard */,
 				9AA4E3E4233C58C700E27D16 /* Assets.xcassets */,
 				9AA4E3E6233C58C700E27D16 /* LaunchScreen.storyboard */,
 				9AA4E3E9233C58C700E27D16 /* Info.plist */,
+			);
+			path = DimmingTransition;
+			sourceTree = "<group>";
+		};
+		9AA4E3EF233C58CF00E27D16 /* DimmingTransition */ = {
+			isa = PBXGroup;
+			children = (
+				9AA4E3FE233C902F00E27D16 /* DimmingTransitioning.swift */,
+				9AA4E3F4233C5AB900E27D16 /* DimmingPresentationAnimatedTransitioning.swift */,
+				9AA4E3F6233C5ADF00E27D16 /* DimmingDismissalAnimatedTransitioning.swift */,
+				9AA4E3F2233C594400E27D16 /* DimmingPresentationController.swift */,
 			);
 			path = DimmingTransition;
 			sourceTree = "<group>";
@@ -138,7 +164,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9AA4E3E0233C58C700E27D16 /* ViewController.swift in Sources */,
+				9AA4E3F7233C5ADF00E27D16 /* DimmingDismissalAnimatedTransitioning.swift in Sources */,
+				9AA4E3FF233C902F00E27D16 /* DimmingTransitioning.swift in Sources */,
+				9AA4E3F9233C5BFE00E27D16 /* ViewController2.swift in Sources */,
+				9AA4E3FB233C5C0500E27D16 /* ViewController3.swift in Sources */,
+				9AA4E3E0233C58C700E27D16 /* ViewController1.swift in Sources */,
+				9AA4E3F3233C594400E27D16 /* DimmingPresentationController.swift in Sources */,
+				9AA4E3F5233C5AB900E27D16 /* DimmingPresentationAnimatedTransitioning.swift in Sources */,
 				9AA4E3DC233C58C700E27D16 /* AppDelegate.swift in Sources */,
 				9AA4E3DE233C58C700E27D16 /* SceneDelegate.swift in Sources */,
 			);
