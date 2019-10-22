@@ -10,6 +10,8 @@ import UIKit
 
 class DimmingDismissalAnimatedTransitioning: NSObject, UIViewControllerAnimatedTransitioning {
    
+    var animationDuration: TimeInterval = 0.35
+    
     var animation: (() -> Void)?
     
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {

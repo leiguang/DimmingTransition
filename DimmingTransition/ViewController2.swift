@@ -61,9 +61,11 @@ class ViewController2: UIViewController, DimmingTransitioningDelegate {
         }
     }
     
+    func dimmingViewTapped() {
+        print(#function)
+    }
+    
     // MARK: - Unwind segue
     
-    @IBAction func unwindViewController2(_ segue: UIStoryboardSegue) {
-        
-    }
+    @IBAction func unwindViewController2(_ segue: UIStoryboardSegue) {}
 }

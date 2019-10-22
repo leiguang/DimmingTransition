@@ -45,6 +45,14 @@ class ViewController3: UIViewController, DimmingTransitioningDelegate {
     
     @IBOutlet weak var contentView: UIView!
     
+    var presentationAnimationDuration: TimeInterval {
+        return 0.5
+    }
+    
+    var dismissalAnimationDuration: TimeInterval {
+        return 0.5
+    }
+    
     func executePresentationAnimation() {
         contentView.transform = CGAffineTransform(scaleX: 0.3, y: 0.3)
         contentView.alpha = 0
@@ -64,10 +72,17 @@ class ViewController3: UIViewController, DimmingTransitioningDelegate {
             self.contentView.alpha = 0
         }
     }
+        
+    var allowTapDimmingViewToDismiss: Bool {
+        return false
+    }
+    
+    func dimmingViewTapped() {
+        print(#function)
+        //        dismiss(animated: true, completion: nil)
+    }
     
     // MARK: - Unwind segue
     
-    @IBAction func unwindViewController3(_ segue: UIStoryboardSegue) {
-        
-    }
+    @IBAction func unwindViewController3(_ segue: UIStoryboardSegue) {}
 }

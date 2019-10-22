@@ -22,9 +22,8 @@ class DimmingPresentationController: UIPresentationController {
             dimmingView.isOpaque = false
             dimmingView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
             dimmingView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapDimmingView(_:))))
-            dimmingView.isUserInteractionEnabled = allowTapDimmingViewToDismiss
             self.dimmingView = dimmingView
-            containerView.addSubview(dimmingView)
+            presentedView?.insertSubview(dimmingView, at: 0)
             
             dimmingView.alpha = 0
             presentingViewController.transitionCoordinator?.animate(alongsideTransition: { [weak self] (_) in
@@ -60,6 +59,8 @@ class DimmingPresentationController: UIPresentationController {
     
     @objc private func tapDimmingView(_ sender: UITapGestureRecognizer) {
         dimmingViewTapped?()
-        presentingViewController.dismiss(animated: true, completion: nil)
+        if allowTapDimmingViewToDismiss {
+            presentingViewController.dismiss(animated: true, completion: nil)
+        }
     }
 }

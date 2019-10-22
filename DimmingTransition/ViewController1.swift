@@ -9,12 +9,9 @@
 import UIKit
 
 class ViewController1: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
     
+    // MARK: - View lifecycle
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         print("ViewController1 viewWillAppear")
@@ -27,8 +24,6 @@ class ViewController1: UIViewController {
     
     // MARK: - Unwind segue
     
-    @IBAction func unwindViewController1(_ segue: UIStoryboardSegue) {
-        
-    }
+    @IBAction func unwindViewController1(_ segue: UIStoryboardSegue) {}
 }
 

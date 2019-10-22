@@ -9,15 +9,26 @@
 import UIKit
 
 protocol DimmingTransitioningDelegate: class {
+    var presentationAnimationDuration: TimeInterval { get }
+    var dismissalAnimationDuration: TimeInterval { get }
+    
     func executePresentationAnimation()
     func executeDismissalAnimation()
     
-    /// Note: There is a bug, the dimming view is not in the view hierarchy of presented view controller, so the tap event can't be passed to dimming view.
-//    var allowTapDimmingViewToDismiss: Bool { get }
-//    func dimmingViewTapped()
+    var allowTapDimmingViewToDismiss: Bool { get }
+    func dimmingViewTapped()
 }
 
 extension DimmingTransitioningDelegate {
+    
+    var presentationAnimationDuration: TimeInterval {
+        return 0.35
+    }
+    
+    var dismissalAnimationDuration: TimeInterval {
+        return 0.35
+    }
+    
     var allowTapDimmingViewToDismiss: Bool {
         return true
     }
@@ -37,9 +48,13 @@ class DimmingTransitioning: NSObject {
         super.init()
         viewController.modalPresentationStyle = .custom
         delegate = viewController
+        
+        presentationAnimatedTransitioning.animationDuration = delegate.presentationAnimationDuration
         presentationAnimatedTransitioning.animation = { [weak self] in
             self?.delegate.executePresentationAnimation()
         }
+        
+        dismissalAnimatedTransitioning.animationDuration = delegate.dismissalAnimationDuration
         dismissalAnimatedTransitioning.animation = { [weak self] in
             self?.delegate.executeDismissalAnimation()
         }
