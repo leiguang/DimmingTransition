@@ -1,15 +1,18 @@
-#### View controller transitioning delegate object with dimming view.
-
-![image](https://github.com/leiguang/DimmingTransition/blob/master/Resources/screenshot.gif)
-
+### [DimmingTransition](https://github.com/leiguang/DimmingTransition)
+View controller transitioning delegate object with dimming view.
 
 
-#### Support:
+
+### Support:
 
 - Customize presentation animation
 - Customize dismissal animation
 - whether allow to dismiss when tap dimming view
 - customize operation when tap dimming view
+
+
+
+![image](https://github.com/leiguang/DimmingTransition/blob/master/Resources/screenshot.gif)
 
 
 
