@@ -20,18 +20,9 @@ protocol DimmingTransitioningDelegate: class {
 }
 
 extension DimmingTransitioningDelegate {
-    
-    var presentationAnimationDuration: TimeInterval {
-        return 0.35
-    }
-    
-    var dismissalAnimationDuration: TimeInterval {
-        return 0.35
-    }
-    
-    var allowTapDimmingViewToDismiss: Bool {
-        return true
-    }
+    var presentationAnimationDuration: TimeInterval { 0.25 }
+    var dismissalAnimationDuration: TimeInterval { 0.25 }
+    var allowTapDimmingViewToDismiss: Bool { true }
     func dimmingViewTapped() {}
 }
 
@@ -39,15 +30,13 @@ class DimmingTransitioning: NSObject {
     
     private let presentationAnimatedTransitioning = DimmingPresentationAnimatedTransitioning()
     private let dismissalAnimatedTransitioning = DimmingDismissalAnimatedTransitioning()
-    private var presentationController: DimmingPresentationController?
     private weak var delegate: DimmingTransitioningDelegate!
     
     override private init() {}
     
-    init(viewController: UIViewController & DimmingTransitioningDelegate) {
+    init(delegate: DimmingTransitioningDelegate) {
         super.init()
-        viewController.modalPresentationStyle = .custom
-        delegate = viewController
+        self.delegate = delegate
         
         presentationAnimatedTransitioning.animationDuration = delegate.presentationAnimationDuration
         presentationAnimatedTransitioning.animation = { [weak self] in
@@ -64,21 +53,20 @@ class DimmingTransitioning: NSObject {
 extension DimmingTransitioning: UIViewControllerTransitioningDelegate {
 
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return presentationAnimatedTransitioning
+        presentationAnimatedTransitioning
     }
     
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return dismissalAnimatedTransitioning
+        dismissalAnimatedTransitioning
     }
 
     func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
-        if presentationController == nil {
-            presentationController = DimmingPresentationController(presentedViewController: presented, presenting: source)
-            presentationController?.allowTapDimmingViewToDismiss = delegate.allowTapDimmingViewToDismiss
-            presentationController?.dimmingViewTapped = { [weak self] in
-                self?.delegate.dimmingViewTapped()
-            }
-            return presentationController
+        let presentationController = DimmingPresentationController(presentedViewController: presented, presenting: source)
+        presentationController.allowTapDimmingViewToDismiss = { [weak self] in
+            self?.delegate.allowTapDimmingViewToDismiss ?? true
+        }
+        presentationController.dimmingViewTapped = { [weak self] in
+            self?.delegate.dimmingViewTapped()
         }
         return presentationController
     }

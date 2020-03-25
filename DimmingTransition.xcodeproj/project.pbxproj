@@ -19,6 +19,10 @@
 		9AA4E3F9233C5BFE00E27D16 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA4E3F8233C5BFE00E27D16 /* ViewController2.swift */; };
 		9AA4E3FB233C5C0500E27D16 /* ViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA4E3FA233C5C0500E27D16 /* ViewController3.swift */; };
 		9AA4E3FF233C902F00E27D16 /* DimmingTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA4E3FE233C902F00E27D16 /* DimmingTransitioning.swift */; };
+		9AEE1ED423D03E7900414EF7 /* BottomPresentDelegateObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEE1ED323D03E7800414EF7 /* BottomPresentDelegateObject.swift */; };
+		9AEE1ED723D066D000414EF7 /* BottomPresentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEE1ED523D066D000414EF7 /* BottomPresentViewController.swift */; };
+		9AEE1ED823D066D000414EF7 /* BottomPresentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AEE1ED623D066D000414EF7 /* BottomPresentViewController.xib */; };
+		9AEE1EDB23D163AB00414EF7 /* BottomPresentBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEE1EDA23D163AB00414EF7 /* BottomPresentBaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +40,10 @@
 		9AA4E3F8233C5BFE00E27D16 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 		9AA4E3FA233C5C0500E27D16 /* ViewController3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController3.swift; sourceTree = "<group>"; };
 		9AA4E3FE233C902F00E27D16 /* DimmingTransitioning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DimmingTransitioning.swift; sourceTree = "<group>"; };
+		9AEE1ED323D03E7800414EF7 /* BottomPresentDelegateObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomPresentDelegateObject.swift; sourceTree = "<group>"; };
+		9AEE1ED523D066D000414EF7 /* BottomPresentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomPresentViewController.swift; sourceTree = "<group>"; };
+		9AEE1ED623D066D000414EF7 /* BottomPresentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomPresentViewController.xib; sourceTree = "<group>"; };
+		9AEE1EDA23D163AB00414EF7 /* BottomPresentBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomPresentBaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +57,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9A0EDC23242BA98B0083A7B4 /* BottomPresent */ = {
+			isa = PBXGroup;
+			children = (
+				9AEE1EDA23D163AB00414EF7 /* BottomPresentBaseViewController.swift */,
+				9AEE1ED323D03E7800414EF7 /* BottomPresentDelegateObject.swift */,
+			);
+			path = BottomPresent;
+			sourceTree = "<group>";
+		};
+		9A0EDC24242BA99B0083A7B4 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				9AA4E3FE233C902F00E27D16 /* DimmingTransitioning.swift */,
+				9AA4E3F4233C5AB900E27D16 /* DimmingPresentationAnimatedTransitioning.swift */,
+				9AA4E3F6233C5ADF00E27D16 /* DimmingDismissalAnimatedTransitioning.swift */,
+				9AA4E3F2233C594400E27D16 /* DimmingPresentationController.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
 		9AA4E3CF233C58C600E27D16 = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +102,7 @@
 				9AA4E3DF233C58C700E27D16 /* ViewController1.swift */,
 				9AA4E3F8233C5BFE00E27D16 /* ViewController2.swift */,
 				9AA4E3FA233C5C0500E27D16 /* ViewController3.swift */,
+				9AEE1ED923D066D500414EF7 /* BottomPresentExample */,
 				9AA4E3E1233C58C700E27D16 /* Main.storyboard */,
 				9AA4E3E4233C58C700E27D16 /* Assets.xcassets */,
 				9AA4E3E6233C58C700E27D16 /* LaunchScreen.storyboard */,
@@ -85,12 +114,19 @@
 		9AA4E3EF233C58CF00E27D16 /* DimmingTransition */ = {
 			isa = PBXGroup;
 			children = (
-				9AA4E3FE233C902F00E27D16 /* DimmingTransitioning.swift */,
-				9AA4E3F4233C5AB900E27D16 /* DimmingPresentationAnimatedTransitioning.swift */,
-				9AA4E3F6233C5ADF00E27D16 /* DimmingDismissalAnimatedTransitioning.swift */,
-				9AA4E3F2233C594400E27D16 /* DimmingPresentationController.swift */,
+				9A0EDC24242BA99B0083A7B4 /* Core */,
+				9A0EDC23242BA98B0083A7B4 /* BottomPresent */,
 			);
 			path = DimmingTransition;
+			sourceTree = "<group>";
+		};
+		9AEE1ED923D066D500414EF7 /* BottomPresentExample */ = {
+			isa = PBXGroup;
+			children = (
+				9AEE1ED523D066D000414EF7 /* BottomPresentViewController.swift */,
+				9AEE1ED623D066D000414EF7 /* BottomPresentViewController.xib */,
+			);
+			path = BottomPresentExample;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,6 +188,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AA4E3E8233C58C700E27D16 /* LaunchScreen.storyboard in Resources */,
+				9AEE1ED823D066D000414EF7 /* BottomPresentViewController.xib in Resources */,
 				9AA4E3E5233C58C700E27D16 /* Assets.xcassets in Resources */,
 				9AA4E3E3233C58C700E27D16 /* Main.storyboard in Resources */,
 			);
@@ -164,12 +201,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AEE1ED423D03E7900414EF7 /* BottomPresentDelegateObject.swift in Sources */,
 				9AA4E3F7233C5ADF00E27D16 /* DimmingDismissalAnimatedTransitioning.swift in Sources */,
 				9AA4E3FF233C902F00E27D16 /* DimmingTransitioning.swift in Sources */,
 				9AA4E3F9233C5BFE00E27D16 /* ViewController2.swift in Sources */,
+				9AEE1EDB23D163AB00414EF7 /* BottomPresentBaseViewController.swift in Sources */,
 				9AA4E3FB233C5C0500E27D16 /* ViewController3.swift in Sources */,
 				9AA4E3E0233C58C700E27D16 /* ViewController1.swift in Sources */,
 				9AA4E3F3233C594400E27D16 /* DimmingPresentationController.swift in Sources */,
+				9AEE1ED723D066D000414EF7 /* BottomPresentViewController.swift in Sources */,
 				9AA4E3F5233C5AB900E27D16 /* DimmingPresentationAnimatedTransitioning.swift in Sources */,
 				9AA4E3DC233C58C700E27D16 /* AppDelegate.swift in Sources */,
 				9AA4E3DE233C58C700E27D16 /* SceneDelegate.swift in Sources */,

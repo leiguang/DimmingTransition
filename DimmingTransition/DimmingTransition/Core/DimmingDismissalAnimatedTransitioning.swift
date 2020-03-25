@@ -1,5 +1,5 @@
 //
-//  DimmingPresentationAnimatedTransitioning.swift
+//  DimmingDismissalAnimatedTransitioning.swift
 //  DimmingTransition
 //
 //  Created by Guang Lei on 2019/9/26.
@@ -8,9 +8,9 @@
 
 import UIKit
 
-class DimmingPresentationAnimatedTransitioning: NSObject, UIViewControllerAnimatedTransitioning {
-    
-    var animationDuration: TimeInterval = 0.35
+class DimmingDismissalAnimatedTransitioning: NSObject, UIViewControllerAnimatedTransitioning {
+   
+    var animationDuration: TimeInterval = 0.25
     
     var animation: (() -> Void)?
     
@@ -19,19 +19,13 @@ class DimmingPresentationAnimatedTransitioning: NSObject, UIViewControllerAnimat
     }
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
-        guard let toViewController = transitionContext.viewController(forKey: .to),
-            let toView = transitionContext.view(forKey: .to) else {
-            return
+        guard let fromViewController = transitionContext.viewController(forKey: .from),
+            let fromView = transitionContext.view(forKey: .from) else {
+                return
         }
         
-        let containerView = transitionContext.containerView
-        
-        toView.backgroundColor = .clear
-        containerView.addSubview(toView)
-        
-        let toViewFinalFrame = transitionContext.finalFrame(for: toViewController)
-        toView.frame = toViewFinalFrame
-        
+        fromView.frame = transitionContext.finalFrame(for: fromViewController)
+
         DispatchQueue.main.asyncAfter(deadline: .now() + transitionDuration(using: transitionContext)) {
             let wasCancelled = transitionContext.transitionWasCancelled
             transitionContext.completeTransition(!wasCancelled)

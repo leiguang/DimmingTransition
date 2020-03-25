@@ -12,7 +12,7 @@ class DimmingPresentationController: UIPresentationController {
     
     private var dimmingView: UIView?
     
-    var allowTapDimmingViewToDismiss = true
+    var allowTapDimmingViewToDismiss: (() -> Bool)?
     var dimmingViewTapped: (() -> Void)?
     
     override func presentationTransitionWillBegin() {
@@ -59,7 +59,7 @@ class DimmingPresentationController: UIPresentationController {
     
     @objc private func tapDimmingView(_ sender: UITapGestureRecognizer) {
         dimmingViewTapped?()
-        if allowTapDimmingViewToDismiss {
+        if allowTapDimmingViewToDismiss?() == true {
             presentingViewController.dismiss(animated: true, completion: nil)
         }
     }

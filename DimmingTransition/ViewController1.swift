@@ -22,6 +22,10 @@ class ViewController1: UIViewController {
         print("ViewController1 viewWillDisappear")
     }
     
+    @IBAction func tapUsingBottomPresentDelegateObject(_ sender: Any) {
+        let vc = BottomPresentViewController()
+        present(vc, animated: true, completion: nil)
+    }
     // MARK: - Unwind segue
     
     @IBAction func unwindViewController1(_ segue: UIStoryboardSegue) {}

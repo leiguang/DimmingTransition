@@ -25,8 +25,9 @@ class ViewController2: UIViewController, DimmingTransitioningDelegate {
     }
     
     func setup() {
-        dimmingTransitioning = DimmingTransitioning(viewController: self)
+        dimmingTransitioning = DimmingTransitioning(delegate: self)
         transitioningDelegate = dimmingTransitioning
+        modalPresentationStyle = .custom
     }
     
     // MARK: - View lifecycle

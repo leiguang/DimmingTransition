@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -27,10 +27,19 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tIn-AQ-AWr">
+                                <rect key="frame" x="67" y="438" width="280" height="30"/>
+                                <state key="normal" title="Using BottomPresentBaseViewController"/>
+                                <connections>
+                                    <action selector="tapUsingBottomPresentDelegateObject:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9So-Nl-AoJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="CEJ-d7-aCd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="L91-ap-Gki"/>
+                            <constraint firstItem="tIn-AQ-AWr" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="VkN-Tk-WYV"/>
+                            <constraint firstItem="tIn-AQ-AWr" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="e2e-Ok-Rcc"/>
                             <constraint firstItem="CEJ-d7-aCd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="eYj-Ha-iH8"/>
                             <constraint firstItem="CEJ-d7-aCd" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="rxa-w4-ZA5"/>
                         </constraints>
