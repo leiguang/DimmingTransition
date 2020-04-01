@@ -15,7 +15,7 @@ class DimmingDismissalAnimatedTransitioning: NSObject, UIViewControllerAnimatedT
     var animation: (() -> Void)?
     
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-        return animationDuration
+        animationDuration
     }
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
