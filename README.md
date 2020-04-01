@@ -63,7 +63,8 @@ protocol DimmingTransitioningDelegate: class {
       6. `dimmingViewTapped` 暗色背景被点击时调用，可在里面实现需要的逻辑，如埋点。
 
 
-![dimmingView.png](https://github.com/leiguang/DimmingTransition/blob/master/Resources/dimmingView.png)
+<img src="Resources/dimmingView.png" alt="dimmingView" width="400" />
+
 
 ## 使用
 
